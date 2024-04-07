@@ -13,7 +13,7 @@ public partial class Autorization : Window
         InitializeComponent();
     }
     private MySqlConnection conn;
-    private string connStr = "server=localhost;database=policlinica;port=3306;User Id=admin;password=Qwertyu1!ZZZ";
+    private string connStr = "server=192.168.161.1;database=policlinica;port=3306;User Id=admin;password=Qwertyu1!ZZZ";
 
     public void Authorization(object? sender, RoutedEventArgs e)
     {

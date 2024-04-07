@@ -9,30 +9,31 @@ using MySql.Data.MySqlClient;
 
 namespace Bolnitca;
 
-public partial class PersonalAddUpd : Window
+public partial class PatientAddUpd : Window
 {
-    private List<Personal> personals;
-    private Personal CurrentPersonal;
+    private List<Patient> patients;
+    private Patient CurrentPatient;
     
-    public PersonalAddUpd(Personal currentPersonal, List<Personal> personal)
+    public PatientAddUpd(Patient currentPatient, List<Patient> patient)
     {
         InitializeComponent();
-        CurrentPersonal = currentPersonal;
-        this.DataContext = CurrentPersonal;
-        personals = personal;
+        CurrentPatient = currentPatient;
+        this.DataContext = CurrentPatient;
+        patients = patient;
     }
+    
     private MySqlConnection conn;
     private string connStr = "server=192.168.161.1;database=policlinica;port=3306;User Id=admin;password=Qwertyu1!ZZZ";
     private void Save_OnClick(object? sender, RoutedEventArgs e)
     {
-        var code = personals.FirstOrDefault(x => x.Код == CurrentPersonal.Код);
+        var code = patients.FirstOrDefault(x => x.Код == CurrentPatient.Код);
         if (code == null)
         {
             try
             {
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string add = "INSERT INTO персонал VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Фамилия.Text + "', '" + Имя.Text + "', '" + Отчество.Text + "', '" + Пол.Text + "', " + Convert.ToInt32(Кабинет.Text ) + ", " + Convert.ToInt32(Должность.Text )+");";
+                string add = "INSERT INTO пациент VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Фамилия.Text + "', '" + Имя.Text + "', '" + Отчество.Text + "', '" + Пол.Text + "', " + Convert.ToInt32(Возраст.Text ) + ", '" + Телефон.Text + "', '" + Полис.Text +"');";
                 MySqlCommand cmd = new MySqlCommand(add, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -48,7 +49,7 @@ public partial class PersonalAddUpd : Window
             {
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string upd = "UPDATE персонал SET Фамилия = '" + Фамилия.Text + "', Имя = '" + Имя.Text + "', Отчество = '" + Отчество.Text + "', Пол = '" + Пол.Text + "', Кабинет = "+ Convert.ToInt32(Кабинет.Text) + ", Должность = "+ Convert.ToInt32(Должность.Text) + " WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
+                string upd = "UPDATE пациент SET Фамилия = '" + Фамилия.Text + "', Имя = '" + Имя.Text + "', Отчество = '" + Отчество.Text + "', Пол = '" + Пол.Text + "', Возраст = "+ Convert.ToInt32(Возраст.Text) + ", Телефон = '" + Телефон.Text + "', Полис = '" + Полис.Text + "' WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
                 MySqlCommand cmd = new MySqlCommand(upd, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -63,7 +64,7 @@ public partial class PersonalAddUpd : Window
     private void GoBack(object? sender, RoutedEventArgs e)
     {
         this.Hide();
-        Bolnitca.PersonalShow personal = new Bolnitca.PersonalShow();
-        personal.Show();
+        Bolnitca.PatientShow patient = new Bolnitca.PatientShow();
+        patient.Show();
     }
 }

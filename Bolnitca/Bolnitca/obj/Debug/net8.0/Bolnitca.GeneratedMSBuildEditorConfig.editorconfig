@@ -26,6 +26,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Menu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/PatientAddUpd.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/PatientShow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
