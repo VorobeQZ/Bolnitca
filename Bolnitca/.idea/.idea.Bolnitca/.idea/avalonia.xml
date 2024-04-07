@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Bolnitca/App.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Autorization.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/MainWindow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Menu.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/PatientShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/PersonalAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/PersonalShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Procedures.axaml" value="Bolnitca/Bolnitca.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
