@@ -27,11 +27,11 @@ public partial class Autorization : Window
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             dataAdapter.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1"||dt.Rows[0][0].ToString() == "2" )
+            if (dt.Rows[0][0].ToString() == "1" ||dt.Rows[0][0].ToString() == "2")
             {
-                var form2 = new Bolnitca.Menu();
+                var menu = new Bolnitca.Menu();
                 this.Hide();
-                form2.Show(); 
+                menu.Show(); 
             }
             else
             {
@@ -44,7 +44,33 @@ public partial class Autorization : Window
         }
         conn.Close();
     }
+    
+    private bool IsUserValidClient(string username, string password) //проверка пользователей по БД
+    {
+        bool isValid = false;
 
+        using (MySqlConnection connection = new MySqlConnection(connStr))
+        {
+            string check = "SELECT COUNT(1) FROM logins WHERE username = @Username AND password= @Password";
+
+            using (MySqlCommand command = new MySqlCommand(check, connection))
+            {
+                command.Parameters.AddWithValue("@Username", username);
+                command.Parameters.AddWithValue("@Password", password);
+
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+                int count = Convert.ToInt32(result);
+
+                if (count == 1)
+                {
+                    isValid = true;
+                }
+            }
+        }
+        return isValid;
+    }
 
     private void Close(object? sender, RoutedEventArgs e)
     {

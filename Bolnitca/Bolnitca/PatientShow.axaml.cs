@@ -14,7 +14,7 @@ public partial class PatientShow : Window
     public PatientShow()
     {
         InitializeComponent();
-     string fullTable = "SELECT * FROM пациент;";//Запрос на отображение таблицы 
+        string fullTable = "SELECT * FROM пациент;";//Запрос на отображение таблицы 
         ShowTable(fullTable);//Метод отображения таблиц в дата грид
         FillCmb();
     }
@@ -50,28 +50,28 @@ public partial class PatientShow : Window
     
     public void FillCmb()
     {
-        patient = new List<Patient>();
-        conn = new MySqlConnection(connStr);
-        conn.Open();
-        MySqlCommand command = new MySqlCommand("SELECT * FROM пациент", conn);
-        MySqlDataReader reader = command.ExecuteReader();
-        while (reader.Read() && reader.HasRows)
-        {
-            var currentPatient = new Patient()
+            patient = new List<Patient>();
+            conn = new MySqlConnection(connStr);
+            conn.Open();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM пациент", conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read() && reader.HasRows)
             {
-                Код = reader.GetInt32("Код"),
-                Фамилия  = reader.GetString("Фамилия"),
-                Имя = reader.GetString("Имя"),
-                Отчество = reader.GetString("Отчество"),
-                Пол = reader.GetString("Пол"),
-                Возраст = reader.GetInt32("Возраст"),
-                Телефон = reader.GetString("Телефон"),
-                Полис = reader.GetString("Полис")
-            };
-            patient.Add(currentPatient);
-        }
-        conn.Close();
-        CmbNum.ItemsSource = patient;
+                var currentPatient = new Patient()
+                {
+                    Код = reader.GetInt32("Код"),
+                    Фамилия  = reader.GetString("Фамилия"),
+                    Имя = reader.GetString("Имя"),
+                    Отчество = reader.GetString("Отчество"),
+                    Пол = reader.GetString("Пол"),
+                    Возраст = reader.GetInt32("Возраст"),
+                    Телефон = reader.GetString("Телефон"),
+                    Полис = reader.GetString("Полис")
+                };
+                patient.Add(currentPatient);
+            }
+            conn.Close();
+            CmbNum.ItemsSource = patient;
     }
     
     private void Back_OnClick(object? sender, RoutedEventArgs e)//Метод активирующийся по нажатию кнопки возврата на прошлую форму

@@ -5,6 +5,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Bolnitca.PersonalAddUpd"
          Title="Внесение изменений в таблицу персонал"
+        Height="600"
+        Width="400"
         WindowStartupLocation="CenterScreen"
         Icon="/Assets/ico.ico"
         Background="SlateGray"
