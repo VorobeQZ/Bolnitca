@@ -27,7 +27,7 @@ public class Analyze
     public string Наименование { get; set; }
 }
 
-public class Specalization
+public class Post
 {
     public int Код { get; set; }
     public string Наименование { get; set; }
@@ -53,4 +53,12 @@ public class Timetable
     public string Время { get; set; }
     public int Анализ { get; set; }
     public int Персонал { get; set; }
+}
+public class Timetableprocedure
+{
+    public int Код { get; set; }
+    public string Время { get; set; }
+    public string Анализ { get; set; }
+    public string Персонал { get; set; }
+    public string Кабинет { get; set; }
 }

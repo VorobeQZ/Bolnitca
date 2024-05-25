@@ -20,4 +20,76 @@
         <PackageReference Include="MySql.Data" Version="8.3.0" />
         <AvaloniaResource Include="Assets\**" />
     </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Complete\PatientAddUpd.axaml.cs">
+        <DependentUpon>PatientAddUpd.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\Menu.axaml.cs">
+        <DependentUpon>Menu.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\Autorization.axaml.cs">
+        <DependentUpon>Autorization.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\PatientShow.axaml.cs">
+        <DependentUpon>PatientShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\PersonalAddUpd.axaml.cs">
+        <DependentUpon>PersonalAddUpd.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\PersonalShow.axaml.cs">
+        <DependentUpon>PersonalShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\CabinetAddUpd.axaml.cs">
+        <DependentUpon>CabinetAddUpd.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\CabinetShow.axaml.cs">
+        <DependentUpon>CabinetShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\PostAddUpd.axaml.cs">
+        <DependentUpon>PostAddUpd.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\PostShow.axaml.cs">
+        <DependentUpon>PostShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\AnalyzeShow.axaml.cs">
+        <DependentUpon>AnalyzeShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\AnalyzeAddUpd.axaml.cs">
+        <DependentUpon>AnalyzeAddUpd.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\TableAddUpd.axaml.cs">
+        <DependentUpon>TableAddUpd.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\TableShow.axaml.cs">
+        <DependentUpon>TableShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\AnalyzesAddUpd.axaml.cs">
+        <DependentUpon>AnalyzesAddUpd.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\AnalyzesShow.axaml.cs">
+        <DependentUpon>AnalyzesShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Complete\ProceduresShow.axaml.cs">
+        <DependentUpon>ProceduresShow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

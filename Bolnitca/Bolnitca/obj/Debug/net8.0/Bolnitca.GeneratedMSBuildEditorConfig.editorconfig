@@ -20,23 +20,53 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Autorization.axaml]
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/AnalyzeAddUpd.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Menu.axaml]
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/AnalyzesAddUpd.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/PatientAddUpd.axaml]
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/AnalyzeShow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/PatientShow.axaml]
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/AnalyzesShow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/PersonalAddUpd.axaml]
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/Autorization.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/PersonalShow.axaml]
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/CabinetAddUpd.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Procedures.axaml]
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/CabinetShow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/Menu.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/PatientAddUpd.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/PatientShow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/PersonalAddUpd.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/PersonalShow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/PostAddUpd.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/PostShow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/ProceduresShow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/TableAddUpd.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/bor18/OneDrive/Рабочий стол/ППП/Bolnitca/Bolnitca/Bolnitca/Complete/TableShow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

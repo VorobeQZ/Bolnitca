@@ -3,15 +3,38 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Bolnitca/AnalyzAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/AnalyzShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/AnalyzeAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/AnalyzeShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/AnalyzesAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/AnalyzesShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/App.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Autorization.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/CabinetAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/CabinetShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/AnalyzeShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/CabinetAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/CabinetShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/Menu.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/PatientAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/PatientShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/PersonalAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/PersonalShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/PostAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/PostShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/MainWindow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Menu.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/PatientAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/PatientShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/PersonalAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/PersonalShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/PostAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/PostShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Procedures.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/ProceduresShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/TableAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/TableShow.axaml" value="Bolnitca/Bolnitca.csproj" />
       </map>
     </option>
   </component>

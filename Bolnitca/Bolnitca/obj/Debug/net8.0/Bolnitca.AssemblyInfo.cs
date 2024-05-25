@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bolnitca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82eb88cec71296d4c7da7bbb6f758b812e63ab2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+449613ed402b767c5d76e50013f80c58636e5fdf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bolnitca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bolnitca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
