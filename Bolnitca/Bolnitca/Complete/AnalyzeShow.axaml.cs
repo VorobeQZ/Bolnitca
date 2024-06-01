@@ -16,7 +16,6 @@ public partial class AnalyzeShow : Window
         InitializeComponent();
          string fullTable = "SELECT * FROM анализ;";//Запрос на отображение таблицы 
         ShowTable(fullTable);//Метод отображения таблиц в дата грид
-        FillCmb();
     }
     private List<Analyze> analyze;//лист с акссесорами доступа для таблицы доктор
     private string connStr = "server=192.168.161.1;database=policlinica;port=3306;User Id=admin;password=Qwertyu1!ZZZ";//Данные для подключения к MySql
@@ -40,26 +39,6 @@ public partial class AnalyzeShow : Window
         }
         conn.Close();//Закрытие подключения
         DataGrid.ItemsSource = analyze;//Заполнение данными грида 
-    }
-    
-    public void FillCmb()
-    {
-        analyze = new List<Analyze>();
-            conn = new MySqlConnection(connStr);
-            conn.Open();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM анализ", conn);
-            MySqlDataReader reader = command.ExecuteReader();
-            while (reader.Read() && reader.HasRows)
-            {
-                var currentAnalyze = new Analyze()
-                {
-                    Код = reader.GetInt32("Код"),
-                    Наименование  = reader.GetString("Наименование")
-                };
-                analyze.Add(currentAnalyze);
-            }
-            conn.Close();
-            CmbNum.ItemsSource = analyze;
     }
     
     private void Back_OnClick(object? sender, RoutedEventArgs e)//Метод активирующийся по нажатию кнопки возврата на прошлую форму
@@ -134,5 +113,9 @@ public partial class AnalyzeShow : Window
         var search = analyze;
         search = search.Where(x => x.Наименование.Contains(Search1.Text)).ToList();
         DataGrid.ItemsSource = search;
+    }
+    private void Close(object? sender, RoutedEventArgs e)
+    {
+        Environment.Exit(0);
     }
 }

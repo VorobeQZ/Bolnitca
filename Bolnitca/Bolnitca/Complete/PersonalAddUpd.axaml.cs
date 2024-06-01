@@ -30,9 +30,11 @@ public partial class PersonalAddUpd : Window
         {
             try
             {
+                int rowCount = personals.Count+1;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string add = "INSERT INTO персонал VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Фамилия.Text + "', '" + Имя.Text + "', '" + Отчество.Text + "', '" + Пол.Text + "', " + Convert.ToInt32(Кабинет.Text ) + ", " + Convert.ToInt32(Должность.Text )+");";
+                string add = "INSERT INTO персонал  VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Фамилия.Text + "', '" + Имя.Text + "', '" + Отчество.Text + "', '" + Пол.Text + "', " + Convert.ToInt32(Кабинет.Text ) + ", " + Convert.ToInt32(Должность.Text )+");";
                 MySqlCommand cmd = new MySqlCommand(add, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -40,12 +42,15 @@ public partial class PersonalAddUpd : Window
             catch (Exception exception)
             {
                 Console.WriteLine("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
         else
         {
             try
             {
+                int rowCount = personals.Count;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string upd = "UPDATE персонал SET Фамилия = '" + Фамилия.Text + "', Имя = '" + Имя.Text + "', Отчество = '" + Отчество.Text + "', Пол = '" + Пол.Text + "', Кабинет = "+ Convert.ToInt32(Кабинет.Text) + ", Должность = "+ Convert.ToInt32(Должность.Text) + " WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
@@ -56,6 +61,7 @@ public partial class PersonalAddUpd : Window
             catch (Exception exception)
             {
                 Console.Write("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
     }

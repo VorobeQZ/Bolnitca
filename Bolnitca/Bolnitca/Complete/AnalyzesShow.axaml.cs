@@ -144,5 +144,9 @@ public partial class AnalyzesShow : Window
         search = search.Where(x => x.Дата.Contains(Search1.Text)).ToList();
         DataGrid.ItemsSource = search;
     }
+    private void Close(object? sender, RoutedEventArgs e)
+    {
+        Environment.Exit(0);
+    }
     
 }

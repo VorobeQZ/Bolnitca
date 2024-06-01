@@ -31,6 +31,8 @@ public partial class AnalyzeAddUpd : Window
         {
             try
             {
+                int rowCount = analyzes.Count+1;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string add = "INSERT INTO анализ VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Наименование.Text  +"');";
@@ -41,12 +43,15 @@ public partial class AnalyzeAddUpd : Window
             catch (Exception exception)
             {
                 Console.WriteLine("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
         else
         {
             try
             {
+                int rowCount = analyzes.Count;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string upd = "UPDATE анализ SET Наименование = '" + Наименование.Text + "' WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
@@ -57,6 +62,7 @@ public partial class AnalyzeAddUpd : Window
             catch (Exception exception)
             {
                 Console.Write("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
     }

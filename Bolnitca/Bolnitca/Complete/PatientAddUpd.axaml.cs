@@ -31,6 +31,8 @@ public partial class PatientAddUpd : Window
         {
             try
             {
+                int rowCount = patients.Count+1;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string add = "INSERT INTO пациент VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Фамилия.Text + "', '" + Имя.Text + "', '" + Отчество.Text + "', '" + Пол.Text + "', " + Convert.ToInt32(Возраст.Text ) + ", '" + Телефон.Text + "', '" + Полис.Text +"');";
@@ -41,12 +43,15 @@ public partial class PatientAddUpd : Window
             catch (Exception exception)
             {
                 Console.WriteLine("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
         else
         {
             try
             {
+                int rowCount = patients.Count;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string upd = "UPDATE пациент SET Фамилия = '" + Фамилия.Text + "', Имя = '" + Имя.Text + "', Отчество = '" + Отчество.Text + "', Пол = '" + Пол.Text + "', Возраст = "+ Convert.ToInt32(Возраст.Text) + ", Телефон = '" + Телефон.Text + "', Полис = '" + Полис.Text + "' WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
@@ -57,6 +62,7 @@ public partial class PatientAddUpd : Window
             catch (Exception exception)
             {
                 Console.Write("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
     }

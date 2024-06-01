@@ -143,4 +143,8 @@ public partial class CabinetShow : Window
         search = search.Where(x => x.Телефон.Contains(Search2.Text)).ToList();
         DataGrid.ItemsSource = search;
     }
+    private void Close(object? sender, RoutedEventArgs e)
+    {
+        Environment.Exit(0);
+    }
 }

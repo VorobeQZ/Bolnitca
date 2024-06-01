@@ -31,9 +31,11 @@ public partial class TableAddUpd : Window
         {
             try
             {
+                int rowCount = timetables.Count+1;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string add = "INSERT INTO расписание VALUES (" + Convert.ToInt32(Код.Text)+  ", '" + Время.Text + "', "  + Convert.ToInt32(Анализ.Text ) + ", " + Convert.ToInt32(Персонал.Text ) + ");";
+                string add = "INSERT INTO расписание VALUES (" + Convert.ToInt32(Код.Text)+  ", '" + Время.SelectedTime + "', "  + Convert.ToInt32(Анализ.Text ) + ", " + Convert.ToInt32(Персонал.Text ) + ");";
                 MySqlCommand cmd = new MySqlCommand(add, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -41,15 +43,18 @@ public partial class TableAddUpd : Window
             catch (Exception exception)
             {
                 Console.WriteLine("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
         else
         {
             try
             {
+                int rowCount = timetables.Count;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
-                string upd = "UPDATE расписание SET Время = '" + Время.Text + "', Анализ = " + Convert.ToInt32(Анализ.Text) + ", Персонал = " + Convert.ToInt32(Персонал.Text ) + " WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
+                string upd = "UPDATE расписание SET Время = '" + Время.SelectedTime + "', Анализ = " + Convert.ToInt32(Анализ.Text) + ", Персонал = " + Convert.ToInt32(Персонал.Text ) + " WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
                 MySqlCommand cmd = new MySqlCommand(upd, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
@@ -57,6 +62,7 @@ public partial class TableAddUpd : Window
             catch (Exception exception)
             {
                 Console.Write("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
     }

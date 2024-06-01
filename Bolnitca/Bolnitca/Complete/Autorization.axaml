@@ -2,14 +2,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="170"
         x:Class="Bolnitca.Autorization"
         Title="Авторизация"
         WindowStartupLocation="CenterScreen"
-        Height="200"
-        Width="300"
+        MaxHeight="170"
+        MaxWidth="300"
+        MinHeight="170"
+        MinWidth="300"
         Icon="/Assets/ico.ico"
-        Background="SlateGray">
+        Background="CornflowerBlue">
     <Grid>
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
@@ -24,8 +26,8 @@
                 <Label Name="LogErr" Content="Неверный логин/пароль!" IsVisible="False"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Button Name="Form2" Content="Вход" Click="Authorization" Margin=" 10 10 65 10"></Button>
-                <Button Name="Exit" Content="Выход" Click="Close" Margin=" 100 10 0 10"></Button>
+                <Button Name="Form2" Content="Вход" Click="Authorization" Margin=" 10 10 0 10" Width="80" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Exit" Content="Выход" Click="Close" Margin=" 100 10 0 10" Width="80" HorizontalContentAlignment="Center"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

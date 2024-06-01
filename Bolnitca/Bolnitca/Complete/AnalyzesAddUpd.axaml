@@ -5,42 +5,44 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Bolnitca.AnalyzesAddUpd"
       Title="Внесение изменений в таблицу Анализы"
-        Height="600"
-        Width="400"
+        Height="300"
+        Width="300"
         WindowStartupLocation="CenterScreen"
         Icon="/Assets/ico.ico"
-        Background="SlateGray"
+        Background="CornflowerBlue"
         >
     <Grid>
-        <UniformGrid Columns="1">
+        <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Код: </TextBlock>
-                <TextBox Name="Код" x:CompileBindings="False" Text="{Binding Код}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
+                <TextBox Name="Код" x:CompileBindings="False" Text="{Binding Код}" IsVisible="False"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
+                <TextBlock Margin = "10 0 0 0" Width="100">Пациент: </TextBlock>
+                <TextBox Name="Пациент" x:CompileBindings="False" Text="{Binding Пациент}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
+                <TextBlock Margin = "10 0 0 0" Width="100">Персонал: </TextBlock>
+                <TextBox Name="Персонал" x:CompileBindings="False" Text="{Binding Персонал}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
+                <TextBlock Margin = "10 0 0 0" Width="100">Анализ: </TextBlock>
+                <TextBox Name="Анализ" x:CompileBindings="False" Text="{Binding Анализ}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
+                <TextBlock Margin = "10 0 0 0" Width="100">Дата: </TextBlock>
+                <TextBox Name="Дата" x:CompileBindings="False" Text="{Binding Дата}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
+                <TextBlock Margin = "10 0 0 0" Width="100">Результат: </TextBlock>
+                <TextBox Name="Результат" x:CompileBindings="False" Text="{Binding Результат}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel>
+                <Label Name="LogErr" Content="Ошибка,проверьте корректность данных" IsVisible="False"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Пациент: </TextBlock>
-                <TextBox Name="Пациент" x:CompileBindings="False" Text="{Binding Пациент}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
+                <Button Name="Save" Content="Сохранить" Click="Save_OnClick"  Margin = "10 15 0 20" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Back" Content="Назад" Click="GoBack"  Margin = "60 15 0 20" Width="100" HorizontalContentAlignment="Center"></Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Персонал: </TextBlock>
-                <TextBox Name="Персонал" x:CompileBindings="False" Text="{Binding Персонал}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Анализ: </TextBlock>
-                <TextBox Name="Анализ" x:CompileBindings="False" Text="{Binding Анализ}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Дата: </TextBlock>
-                <TextBox Name="Дата" x:CompileBindings="False" Text="{Binding Дата}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Результат: </TextBlock>
-                <TextBox Name="Результат" x:CompileBindings="False" Text="{Binding Результат}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button Name="Save" Content="Сохранить" Click="Save_OnClick"  Margin = "10 15 0 20"></Button>
-                <Button Name="Back" Content="Назад" Click="GoBack"  Margin = "50 15 0 20"></Button>
-            </StackPanel>
-        </UniformGrid>
+        </StackPanel>
     </Grid>
 </Window>

@@ -31,6 +31,8 @@ public partial class CabinetAddUpd : Window
         {
             try
             {
+                int rowCount = cabinets.Count+1;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string add = "INSERT INTO кабинет VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Наименование.Text + "', '" + Телефон.Text +"');";
@@ -41,12 +43,15 @@ public partial class CabinetAddUpd : Window
             catch (Exception exception)
             {
                 Console.WriteLine("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
         else
         {
             try
             {
+                int rowCount = cabinets.Count;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string upd = "UPDATE кабинет SET Наименование = '" + Наименование.Text + "', Телефон = '" + Телефон.Text + "' WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
@@ -57,6 +62,7 @@ public partial class CabinetAddUpd : Window
             catch (Exception exception)
             {
                 Console.Write("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
     }

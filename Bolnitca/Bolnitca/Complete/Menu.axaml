@@ -2,46 +2,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
         x:Class="Bolnitca.Menu"
          Title="Выбор таблицы данных"
-        Height="280"
-        Width="300"
+        MinHeight="200"
+        MinWidth="400"
+        MaxHeight="200"
+        MaxWidth="400"
         WindowStartupLocation="CenterScreen"
         Icon="/Assets/ico.ico"
-        Background="SlateGray">
+        Background="CornflowerBlue">
         <Grid>
-            
-                <StackPanel Orientation="Vertical">
-                    <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
-                        <Button Name="personal" Content="Персонал" Click="Personal"></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
-                        <Button Name="patient" Content="Пациент" Click="Patient"></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
-                        <Button Name="analyze" Content="Анализ" Click="Analyze"></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="10 10 0 0">
-                        <Button Name="analyzes" Content="Анализы" Click="Analyzes"></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="65 85 0 0">
-                        <Button Name="exit" Content="Выход" Click="Exit_OnClick"></Button>
+                <StackPanel Orientation="Vertical" Margin="10 10 80 0">
+                        <Button Name="personal" Content="Персонал" Click="Personal" Width="180" HorizontalContentAlignment="Center" Margin=" 0 0 0 5"></Button>
+                        <Button Name="patient" Content="Пациент" Click="Patient" Width="180" HorizontalContentAlignment="Center" Margin=" 0 0 0 5"></Button>
+                        <Button Name="analyze" Content="Анализ" Click="Analyze" Width="180" HorizontalContentAlignment="Center" Margin=" 0 0 0 5"></Button>
+                        <Button Name="analyzes" Content="Анализы" Click="Analyzes" Width="180" HorizontalContentAlignment="Center"></Button>
+                    <StackPanel Orientation="Horizontal" Margin="135 20 0 0">
+                        <Button Name="exit" Content="Выход" Click="Exit_OnClick" Width="100" HorizontalContentAlignment="Center"></Button>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel Orientation="Vertical">
-                    <StackPanel Orientation="Horizontal" Margin="100 10 0 0">
-                        <Button Name="specialization" Content="Должность" Click="Post"></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="100 10 0 0">
-                        <Button Name="timetable" Content="Расписание" Click="Table"></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="100 10 0 0">
-                        <Button Name="cabinet" Content="Кабинет" Click="Cabinet"></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="100 10 0 0">
-                        <Button Name="procedure" Content="Хранимые процедуры" Click="Procedure"></Button>
-                    </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="200 10 0 0">
+                        <Button Name="specialization" Content="Должность" Click="Post" Width="180" HorizontalContentAlignment="Center" Margin=" 0 0 0 5"></Button>
+                        <Button Name="timetable" Content="Расписание" Click="Table" Width="180" HorizontalContentAlignment="Center" Margin=" 0 0 0 5"></Button>
+                        <Button Name="cabinet" Content="Кабинет" Click="Cabinet" Width="180" HorizontalContentAlignment="Center" Margin=" 0 0 0 5"></Button>
+                        <Button Name="procedure" Content="Хранимые процедуры" Click="Procedure" Width="180" HorizontalContentAlignment="Center" Margin=" 0 0 0 5"></Button>
             </StackPanel>
         </Grid>
 </Window>

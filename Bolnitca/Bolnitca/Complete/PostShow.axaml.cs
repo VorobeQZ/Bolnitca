@@ -109,12 +109,15 @@ public partial class PostShow : Window
             Console.WriteLine(ex.Message);
         }
     }
-    private void AddData(object? sender, RoutedEventArgs e)//Метод активирующийся по нажатию кнопки для добавления новых данных
+
+    private void
+        AddData(object? sender, RoutedEventArgs e) //Метод активирующийся по нажатию кнопки для добавления новых данных
     {
         Post newPost = new Post();
-       Bolnitca.PostAddUpd addWindow = new Bolnitca.PostAddUpd(newPost, post);
-       addWindow.Show();
-       this.Hide();
+        Bolnitca.PostAddUpd addWindow = new Bolnitca.PostAddUpd(newPost, post);
+        addWindow.Show();
+        this.Hide();
+
     }
 
     private void EditData(object? sender, RoutedEventArgs e)//Метод активирующийся по нажатию кнопки для редактирования данных
@@ -134,6 +137,10 @@ public partial class PostShow : Window
         var search = post;
         search = search.Where(x => x.Наименование.Contains(Search1.Text)).ToList();
         DataGrid.ItemsSource = search;
+    }
+    private void Close(object? sender, RoutedEventArgs e)
+    {
+        Environment.Exit(0);
     }
    
 }

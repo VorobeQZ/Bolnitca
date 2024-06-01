@@ -10,10 +10,16 @@
         <entry key="Bolnitca/AnalyzesAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/AnalyzesShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/App.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Assets/Window1.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Autorization.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/CabinetAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/CabinetShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/AddUPD.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/AnalyzeAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Complete/AnalyzeShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/AnalyzesAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/AnalyzesShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/Autorization.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Complete/CabinetAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Complete/CabinetShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Complete/Menu.axaml" value="Bolnitca/Bolnitca.csproj" />
@@ -23,6 +29,9 @@
         <entry key="Bolnitca/Complete/PersonalShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Complete/PostAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Complete/PostShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/ProceduresShow.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/TableAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />
+        <entry key="Bolnitca/Complete/TableShow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/MainWindow.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/Menu.axaml" value="Bolnitca/Bolnitca.csproj" />
         <entry key="Bolnitca/PatientAddUpd.axaml" value="Bolnitca/Bolnitca.csproj" />

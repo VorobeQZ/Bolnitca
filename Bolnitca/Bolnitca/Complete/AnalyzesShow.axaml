@@ -5,20 +5,22 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Bolnitca.AnalyzesShow"
         Title="Анализы"
-        Height="500"
-        Width="800"
+        MinHeight="450"
+        MinWidth="800"
+        MaxHeight="450"
+        MaxWidth="800"
         WindowStartupLocation="CenterScreen"
         Icon="/Assets/ico.ico"
-        Background="SlateGray">
+        Background="CornflowerBlue">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <TextBlock Margin = "10 10 0 0" FontSize = "20" FontWeight="Bold"> Таблица "Анализы"</TextBlock>
+            <TextBlock Margin = "300 10 0 0" FontSize = "20" FontWeight="Bold"> Таблица "Анализы"</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0"> Поиск по дате: </TextBlock>
-                <TextBox Name="Search1" TextChanged="Searchname" Width="200" Margin ="33 10 0 0"></TextBox>
+                <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0"> Поиск по дате:</TextBlock>
+                <TextBox Name="Search1" TextChanged="Searchname" Width="150" Margin ="33 10 0 0"></TextBox>
                 <TextBlock VerticalAlignment="Center"
                            x:Name="FilterNum" Margin ="10 10 0 0">Фильтрация по коду: </TextBlock>
-                <ComboBox Name="CmbNum" Width="200" Margin ="10 10 0 0" 
+                <ComboBox Name="CmbNum" Width="150" Margin ="10 10 0 0" 
                           x:CompileBindings="False"
                 SelectionChanged="CmbNum_OnSelectionChanged">
                     <ComboBox.ItemTemplate>
@@ -31,13 +33,13 @@
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Margin="10 12 00 0">
-                        <Button Name="Add" Content="Добавить" Click="AddData"></Button>
+                        <Button Name="Add" Content="Добавить" Click="AddData" Width="100" HorizontalContentAlignment="Center"></Button>
                     </StackPanel>
                     <StackPanel Margin="10 12 00 0">
-                        <Button Name="Update" Content="Изменить" Click="EditData"></Button>
+                        <Button Name="Update" Content="Изменить" Click="EditData" Width="100" HorizontalContentAlignment="Center"></Button>
                     </StackPanel>
                     <StackPanel Margin="10 12 00 0">
-                        <Button Name="Delete" Content="Удалить" Click="DeleteData"></Button>
+                        <Button Name="Delete" Content="Удалить" Click="DeleteData" Width="100" HorizontalContentAlignment="Center"></Button>
                     </StackPanel>
                 </StackPanel>
             </StackPanel> 
@@ -52,12 +54,10 @@
                 <DataGridTextColumn Header="Результат" Binding="{Binding Результат}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-            
-            <StackPanel Orientation="Horizontal" Margin="10 20 20 0">
-                <Button Name="Back" Content="Назад" Click="Back_OnClick"></Button>
-                <StackPanel Margin="100 0 00 0">
-                <Button Name="Reset" Content="Сброс" Click="Reset_OnClick"></Button>
-                </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10 0 20 0">
+                <Button Name="Back" Content="Назад" Click="Back_OnClick" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Reset" Content="Сброс" Click="Reset_OnClick" Margin=" 10 10 0 10" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Exit" Content="Выход" Click="Close" Margin=" 470 10 0 10" Width="100" HorizontalContentAlignment="Center"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

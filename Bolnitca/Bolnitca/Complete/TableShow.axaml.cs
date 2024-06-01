@@ -132,6 +132,10 @@ public partial class TableShow : Window
         editWindow.Show();
         this.Close();
     }
+    private void Close(object? sender, RoutedEventArgs e)
+    {
+        Environment.Exit(0);
+    }
 
    
 }

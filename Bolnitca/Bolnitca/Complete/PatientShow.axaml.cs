@@ -153,4 +153,8 @@ public partial class PatientShow : Window
         search = search.Where(x => x.Фамилия.Contains(Search2.Text)).ToList();
         DataGrid.ItemsSource = search;
     }
+    private void Close(object? sender, RoutedEventArgs e)
+    {
+        Environment.Exit(0);
+    }
 }

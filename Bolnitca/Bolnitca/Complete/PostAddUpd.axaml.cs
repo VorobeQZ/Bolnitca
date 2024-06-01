@@ -20,6 +20,7 @@ public partial class PostAddUpd : Window
         CurrentPost = currentPost;
         this.DataContext = CurrentPost;
         posts = post;
+        
     }
     
     private MySqlConnection conn;
@@ -31,6 +32,8 @@ public partial class PostAddUpd : Window
         {
             try
             {
+                int rowCount = posts.Count+1;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string add = "INSERT INTO должность VALUES (" + Convert.ToInt32(Код.Text)+ ", '" + Наименование.Text  +"');";
@@ -41,12 +44,15 @@ public partial class PostAddUpd : Window
             catch (Exception exception)
             {
                 Console.WriteLine("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
         else
         {
             try
             {
+                int rowCount = posts.Count;
+                Код.Text = rowCount.ToString();
                 conn = new MySqlConnection(connStr);
                 conn.Open();
                 string upd = "UPDATE должность SET Наименование = '" + Наименование.Text + "' WHERE Код = " + Convert.ToInt32(Код.Text) + ";";
@@ -57,6 +63,7 @@ public partial class PostAddUpd : Window
             catch (Exception exception)
             {
                 Console.Write("Error" + exception);
+                LogErr.IsVisible = true;
             }
         }
     }

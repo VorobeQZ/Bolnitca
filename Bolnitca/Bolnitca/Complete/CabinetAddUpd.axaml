@@ -5,30 +5,31 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Bolnitca.CabinetAddUpd"
        Title="Внесение изменений в таблицу кабинет"
-        Height="600"
-        Width="400"
+        MinHeight="180"
+        MinWidth="310"
+        MaxHeight="180"
+        MaxWidth="310"
         WindowStartupLocation="CenterScreen"
         Icon="/Assets/ico.ico"
-        Background="SlateGray"
-        >
+        Background="CornflowerBlue">
     <Grid>
-        <UniformGrid Columns="1">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Код: </TextBlock>
-                <TextBox Name="Код" x:CompileBindings="False" Text="{Binding Код}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
+        <StackPanel Orientation="Vertical">
+                <TextBox Name="Код" x:CompileBindings="False" Text="{Binding Код}" IsVisible="False"></TextBox>
+            <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
+                <TextBlock Margin = "10 0 0 0" Width="120">Наименование: </TextBlock>
+                <TextBox Name="Наименование" x:CompileBindings="False" Text="{Binding Наименование}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
+                <TextBlock Margin = "10 0 0 0" Width="120">Телефон: </TextBlock>
+                <TextBox Name="Телефон" x:CompileBindings="False" Text="{Binding Телефон}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel>
+                <Label Name="LogErr" Content="Ошибка,проверьте корректность данных" IsVisible="False"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Наименование: </TextBlock>
-                <TextBox Name="Наименование" x:CompileBindings="False" Text="{Binding Наименование}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
+                <Button Name="Save" Content="Сохранить" Click="Save_OnClick"  Margin = "10 15 0 20" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Back" Content="Назад" Click="GoBack"  Margin = "80 15 0 20" Width="100" HorizontalContentAlignment="Center"></Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin = "10 35 0 0">Телефон: </TextBlock>
-                <TextBox Name="Телефон" x:CompileBindings="False" Text="{Binding Телефон}" Width="200" Height="5" Margin = "10 0 0 0"></TextBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button Name="Save" Content="Сохранить" Click="Save_OnClick"  Margin = "10 15 0 20"></Button>
-                <Button Name="Back" Content="Назад" Click="GoBack"  Margin = "50 15 0 20"></Button>
-            </StackPanel>
-        </UniformGrid>
     </Grid>
 </Window>

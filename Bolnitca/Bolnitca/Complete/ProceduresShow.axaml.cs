@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 using Avalonia;
@@ -46,5 +47,9 @@ public partial class ProceduresShow : Window
         Bolnitca.Menu menu = new Bolnitca.Menu();
         Hide();
         menu.Show();
+    }
+    private void Close(object? sender, RoutedEventArgs e)
+    {
+        Environment.Exit(0);
     }
 }

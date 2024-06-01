@@ -2,23 +2,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="750" d:DesignHeight="430"
         x:Class="Bolnitca.PersonalShow"
         Title="Персонал"
-        Height="500"
-        Width="800"
+        MinHeight="430"
+        MinWidth="750"
+        MaxHeight="430"
+        MaxWidth="750"
         WindowStartupLocation="CenterScreen"
         Icon="/Assets/ico.ico"
-        Background="SlateGray">
+        Background="CornflowerBlue">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <TextBlock Margin = "10 10 0 0" FontSize = "20" FontWeight="Bold"> Таблица "Медицинский персонал"</TextBlock>
+            <TextBlock Margin = "200 10 0 0" FontSize = "20" FontWeight="Bold"> Таблица "Медицинский персонал"</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0"> Поиск по имени: </TextBlock>
-                <TextBox Name="Search1" TextChanged="Searchname" Width="200" Margin ="33 10 0 0"></TextBox>
+                <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0" Width="130"> Поиск по имени: </TextBlock>
+                <TextBox Name="Search1" TextChanged="Searchname" Width="150" Margin ="33 10 0 0"></TextBox>
                 <TextBlock VerticalAlignment="Center"
                            x:Name="FilterNum" Margin ="10 10 0 0">Фильтрация по коду: </TextBlock>
-                <ComboBox Name="CmbNum" Width="200" Margin ="10 10 0 0" 
+                <ComboBox Name="CmbNum" Width="150" Margin ="10 10 0 0" 
                           x:CompileBindings="False"
                 SelectionChanged="CmbNum_OnSelectionChanged">
                     <ComboBox.ItemTemplate>
@@ -30,37 +32,35 @@
         </StackPanel> 
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0"> Поиск по фамилии: </TextBlock>
-                    <TextBox Name="Search2" TextChanged="Searchlastname" Width="200" Margin ="33 10 0 0"></TextBox>
+                    <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0" Width="130"> Поиск по фамилии: </TextBlock>
+                    <TextBox Name="Search2" TextChanged="Searchlastname" Width="150" Margin ="33 10 0 0"></TextBox>
                     <StackPanel Margin="10 12 00 0">
-                        <Button Name="Add" Content="Добавить" Click="AddData"></Button>
+                        <Button Name="Add" Content="Добавить" Click="AddData" Width="100" HorizontalContentAlignment="Center"></Button>
                     </StackPanel>
                     <StackPanel Margin="10 12 00 0">
-                        <Button Name="Update" Content="Изменить" Click="EditData"></Button>
+                        <Button Name="Update" Content="Изменить" Click="EditData" Width="100" HorizontalContentAlignment="Center"></Button>
                     </StackPanel>
                     <StackPanel Margin="10 12 00 0">
-                        <Button Name="Delete" Content="Удалить" Click="DeleteData"></Button>
+                        <Button Name="Delete" Content="Удалить" Click="DeleteData" Width="100" HorizontalContentAlignment="Center"></Button>
                     </StackPanel>
                 </StackPanel>
             </StackPanel> 
             <DataGrid Name="DataGrid" x:CompileBindings="False" Margin ="10 20 0 0" Height="250" GridLinesVisibility="All"
                       BorderThickness="1" BorderBrush="Gray">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Код" Binding="{Binding Код}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Имя" Binding="{Binding Имя}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Отчество" Binding="{Binding Отчество}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Пол" Binding="{Binding Пол}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Кабинет" Binding="{Binding Кабинет}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Должность" Binding="{Binding Должность}"></DataGridTextColumn>
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="Код" Binding="{Binding Код}" ></DataGridTextColumn >
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Имя}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Отчество}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Пол" Binding="{Binding Пол}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Кабинет" Binding="{Binding Кабинет}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Должность" Binding="{Binding Должность}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-            
-            <StackPanel Orientation="Horizontal" Margin="10 20 20 0">
-                <Button Name="Back" Content="Назад" Click="Back_OnClick"></Button>
-                <StackPanel Margin="100 0 00 0">
-                <Button Name="Reset" Content="Сброс" Click="Reset_OnClick"></Button>
-                </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10 0 20 0">
+                <Button Name="Back" Content="Назад" Click="Back_OnClick" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Reset" Content="Сброс" Click="Reset_OnClick" Margin=" 20 10 0 10" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Exit" Content="Выход" Click="Close" Margin=" 400 10 0 10" Width="100" HorizontalContentAlignment="Center"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>
