@@ -14,7 +14,7 @@ public partial class AnalyzesShow : Window
     public AnalyzesShow()
     {
         InitializeComponent();
-        string fullTable = "SELECT * FROM анализы;";//Запрос на отображение таблицы 
+        string fullTable = "select Анализы.Код,CONCAT(пациент.Фамилия,' ',пациент.Имя,' ',пациент.Отчество)as \"Пациент\", CONCAT(персонал.Фамилия,' ',персонал.Имя,' ',персонал.Отчество)as \"Персонал\", Анализ.Наименование as Анализ ,Дата,Результат from Анализы inner join Пациент on Анализы.Пациент=Пациент.Код inner join Персонал on Анализы.персонал=Персонал.Код inner join Анализ on Анализы.Анализ=Анализ.Код ;";//Запрос на отображение таблицы 
         ShowTable(fullTable);//Метод отображения таблиц в дата грид
         FillCmb();
     }
@@ -34,9 +34,9 @@ public partial class AnalyzesShow : Window
             var currentAnalyzes = new Analyzes()//Заполнение данными для грида
             {
                 Код = reader.GetInt32("Код"),
-                Пациент  = reader.GetInt32("Пациент"),
-                Персонал = reader.GetInt32("Персонал"),
-                Анализ = reader.GetInt32("Анализ"),
+                Пациент  = reader.GetString("Пациент"),
+                Персонал = reader.GetString("Персонал"),
+                Анализ = reader.GetString("Анализ"),
                 Дата = reader.GetString("Дата"),
                 Результат = reader.GetString("Результат")
                 
@@ -52,16 +52,16 @@ public partial class AnalyzesShow : Window
         analyzes = new List<Analyzes>();
             conn = new MySqlConnection(connStr);
             conn.Open();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM анализы", conn);
+            MySqlCommand command = new MySqlCommand("select Анализы.Код,CONCAT(пациент.Фамилия,' ',пациент.Имя,' ',пациент.Отчество)as \"Пациент\", CONCAT(персонал.Фамилия,' ',персонал.Имя,' ',персонал.Отчество)as \"Персонал\", Анализ.Наименование as Анализ ,Дата,Результат from Анализы inner join Пациент on Анализы.Пациент=Пациент.Код inner join Персонал on Анализы.персонал=Персонал.Код inner join Анализ on Анализы.Анализ=Анализ.Код ;", conn);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read() && reader.HasRows)
             {
                 var currentAnalyzes = new Analyzes()
                 {
                     Код = reader.GetInt32("Код"),
-                    Пациент  = reader.GetInt32("Пациент"),
-                    Персонал = reader.GetInt32("Персонал"),
-                    Анализ = reader.GetInt32("Анализ"),
+                    Пациент  = reader.GetString("Пациент"),
+                    Персонал = reader.GetString("Персонал"),
+                    Анализ = reader.GetString("Анализ"),
                     Дата = reader.GetString("Дата"),
                     Результат = reader.GetString("Результат")
                 };
@@ -111,7 +111,7 @@ public partial class AnalyzesShow : Window
             cmd.ExecuteNonQuery();
             conn.Close();
             analyzes.Remove(currentAnalyzes);
-            ShowTable("SELECT * FROM анализы;");
+            ShowTable("select Анализы.Код,CONCAT(пациент.Фамилия,' ',пациент.Имя,' ',пациент.Отчество)as \"Пациент\", CONCAT(персонал.Фамилия,' ',персонал.Имя,' ',персонал.Отчество)as \"Персонал\", Анализ.Наименование as Анализ ,Дата,Результат from Анализы inner join Пациент on Анализы.Пациент=Пациент.Код inner join Персонал on Анализы.персонал=Персонал.Код inner join Анализ on Анализы.Анализ=Анализ.Код ;");
         }
         catch (Exception ex)
         {

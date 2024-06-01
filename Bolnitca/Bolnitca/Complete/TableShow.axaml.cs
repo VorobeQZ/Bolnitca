@@ -14,7 +14,7 @@ public partial class TableShow : Window
     public TableShow()
     {
         InitializeComponent();
-        string fullTable = "SELECT * FROM расписание;";//Запрос на отображение таблицы 
+        string fullTable = "select Расписание.Код,Время,анализ.наименование as Анализ,CONCAT(персонал.Фамилия,' ',персонал.Имя,' ',персонал.Отчество)as \"Персонал\" from расписание Join кабинет on расписание.персонал=кабинет.код join анализ on расписание.анализ=анализ.код join Персонал on расписание.персонал=персонал.код;";//Запрос на отображение таблицы 
         ShowTable(fullTable);//Метод отображения таблиц в дата грид
         FillCmb();
     }
@@ -35,8 +35,8 @@ public partial class TableShow : Window
             {
                 Код = reader.GetInt32("Код"),
                 Время  = reader.GetString("Время"),
-                Анализ = reader.GetInt32("Анализ"),
-                Персонал = reader.GetInt32("Персонал")
+                Анализ = reader.GetString("Анализ"),
+                Персонал = reader.GetString("Персонал")
             };
             timetable.Add(currentTimetable);
         }
@@ -49,7 +49,7 @@ public partial class TableShow : Window
         timetable = new List<Timetable>();
             conn = new MySqlConnection(connStr);
             conn.Open();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM расписание", conn);
+            MySqlCommand command = new MySqlCommand("select Расписание.Код,Время,анализ.наименование as Анализ,CONCAT(персонал.Фамилия,' ',персонал.Имя,' ',персонал.Отчество)as \"Персонал\" from расписание Join кабинет on расписание.персонал=кабинет.код join анализ on расписание.анализ=анализ.код join Персонал on расписание.персонал=персонал.код;", conn);
             MySqlDataReader reader = command.ExecuteReader();
             while (reader.Read() && reader.HasRows)
             {
@@ -57,8 +57,8 @@ public partial class TableShow : Window
                 {
                     Код = reader.GetInt32("Код"),
                     Время  = reader.GetString("Время"),
-                    Анализ = reader.GetInt32("Анализ"),
-                    Персонал = reader.GetInt32("Персонал")
+                    Анализ = reader.GetString("Анализ"),
+                    Персонал = reader.GetString("Персонал")
                 };
                 timetable.Add(currentTimetable);
             }
@@ -106,7 +106,7 @@ public partial class TableShow : Window
             cmd.ExecuteNonQuery();
             conn.Close();
             timetable.Remove(currentTimetable);
-            ShowTable("SELECT * FROM расписание;");
+            ShowTable("select Расписание.Код,Время,анализ.наименование as Анализ,CONCAT(персонал.Фамилия,' ',персонал.Имя,' ',персонал.Отчество)as \"Персонал\" from расписание Join кабинет on расписание.персонал=кабинет.код join анализ on расписание.анализ=анализ.код join Персонал on расписание.персонал=персонал.код;");
         }
         catch (Exception ex)
         {

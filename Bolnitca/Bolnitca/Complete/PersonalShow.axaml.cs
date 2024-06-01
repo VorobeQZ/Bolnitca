@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
@@ -14,7 +15,7 @@ public partial class PersonalShow : Window
     public PersonalShow()
     {
         InitializeComponent();
-        string fullTable = "SELECT * FROM персонал;";//Запрос на отображение таблицы 
+        string fullTable = "select Персонал.Код, Фамилия, Имя, Отчество, Пол, Кабинет.Наименование as Кабинет ,Должность.Наименование as Должность from персонал inner join кабинет on персонал.кабинет=кабинет.Код inner join должность on персонал.должность=Должность.Код ";//Запрос на отображение таблицы 
         ShowTable(fullTable);//Метод отображения таблиц в дата грид
         FillCmb();
     }
@@ -38,8 +39,8 @@ public partial class PersonalShow : Window
                 Имя = reader.GetString("Имя"),
                 Отчество = reader.GetString("Отчество"),
                 Пол = reader.GetString("Пол"),
-                Кабинет = reader.GetInt32("Кабинет"),
-                Должность = reader.GetInt32("Должность")
+                Кабинет = reader.GetString("Кабинет"),
+                Должность = reader.GetString("Должность")
   
             };
             personal.Add(currentPersonal);
@@ -53,7 +54,7 @@ public partial class PersonalShow : Window
         personal = new List<Personal>();
         conn = new MySqlConnection(connStr);
         conn.Open();
-        MySqlCommand command = new MySqlCommand("SELECT * FROM персонал", conn);
+        MySqlCommand command = new MySqlCommand("select Персонал.Код, Фамилия, Имя, Отчество, Пол, Кабинет.Наименование as Кабинет ,Должность.Наименование as Должность from персонал inner join кабинет on персонал.кабинет=кабинет.Код inner join должность on персонал.должность=Должность.Код ", conn);
         MySqlDataReader reader = command.ExecuteReader();
         while (reader.Read() && reader.HasRows)
         {
@@ -64,8 +65,8 @@ public partial class PersonalShow : Window
                 Имя = reader.GetString("Имя"),
                 Отчество = reader.GetString("Отчество"),
                 Пол = reader.GetString("Пол"),
-                Кабинет = reader.GetInt32("Кабинет"),
-                Должность = reader.GetInt32("Должность")
+                Кабинет = reader.GetString("Кабинет"),
+                Должность = reader.GetString("Должность")
             };
             personal.Add(currentPersonal);
         }
@@ -113,7 +114,7 @@ public partial class PersonalShow : Window
             cmd.ExecuteNonQuery();
             conn.Close();
             personal.Remove(currentPersonal);
-            ShowTable("SELECT * FROM персонал;");
+            ShowTable("select Персонал.Код, Фамилия, Имя, Отчество, Пол, Кабинет.Наименование as Кабинет ,Должность.Наименование as Должность from персонал inner join кабинет on персонал.кабинет=кабинет.Код inner join должность on персонал.должность=Должность.Код ;");
         }
         catch (Exception ex)
         {

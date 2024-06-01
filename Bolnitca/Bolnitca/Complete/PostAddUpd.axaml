@@ -21,6 +21,7 @@
             </StackPanel>
             <StackPanel>
                 <Label Name="LogErr" Content="Ошибка,проверьте корректность данных" IsVisible="False"></Label>
+                <Label Name="Okey" Content="Изменения успешно внесены" IsVisible="False"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Name="Save" Content="Сохранить" Click="Save_OnClick"  Margin = "10 15 0 20" Width="100" HorizontalContentAlignment="Center"></Button>

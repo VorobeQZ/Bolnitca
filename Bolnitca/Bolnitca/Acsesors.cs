@@ -7,8 +7,8 @@ public partial class Personal
     public string Имя { get; set; }
     public string Отчество { get; set; }
     public string Пол { get; set; }
-    public int Кабинет { get; set; }
-    public int Должность { get; set; }
+    public string Кабинет { get; set; }
+    public string Должность { get; set; }
 }
 public partial class Patient
 {
@@ -35,9 +35,9 @@ public class Post
 public class Analyzes
 {
     public int Код { get; set; }
-    public int Пациент { get; set; }
-    public int Персонал { get; set; }
-    public int Анализ { get; set; }
+    public string Пациент { get; set; }
+    public string Персонал { get; set; }
+    public string Анализ { get; set; }
     public string Дата { get; set; }
     public string Результат { get; set; }
 }
@@ -51,8 +51,8 @@ public class Timetable
 {
     public int Код { get; set; }
     public string Время { get; set; }
-    public int Анализ { get; set; }
-    public int Персонал { get; set; }
+    public string Анализ { get; set; }
+    public string Персонал { get; set; }
 }
 public class Timetableprocedure
 {

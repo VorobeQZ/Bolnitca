@@ -39,6 +39,7 @@ public partial class PatientAddUpd : Window
                 MySqlCommand cmd = new MySqlCommand(add, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
+                Okey.IsVisible = true;
             }
             catch (Exception exception)
             {
@@ -58,6 +59,7 @@ public partial class PatientAddUpd : Window
                 MySqlCommand cmd = new MySqlCommand(upd, conn);
                 cmd.ExecuteNonQuery();
                 conn.Close();
+                Okey.IsVisible = true;
             }
             catch (Exception exception)
             {

@@ -24,14 +24,27 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin = "10 15 0 0" >
                 <TextBlock Margin = "10 0 0 0" Width="80" >Анализ: </TextBlock>
-                <TextBox Name="Анализ" x:CompileBindings="False" Text="{Binding Анализ}" Width="150" Height="5"  Margin = "10 0 0 0"></TextBox>
-            </StackPanel>
+                    <ComboBox Name="Анализ" Width="150" Margin ="10 0 0 0" x:CompileBindings="False">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Наименование}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
             <StackPanel Orientation="Horizontal" Margin = "10 15 0 0">
                 <TextBlock Margin = "10 0 0 0" Width="80">Персонал: </TextBlock>
-                <TextBox Name="Персонал" x:CompileBindings="False" Text="{Binding Персонал}" Width="150" Height="5" Margin = "10 0 0 0"></TextBox>
+                <ComboBox Name="Персонал" Width="150" Margin ="10 0 0 0" x:CompileBindings="False">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Фамилия}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
             </StackPanel>
             <StackPanel>
                 <Label Name="LogErr" Content="Ошибка,проверьте корректность данных" IsVisible="False"></Label>
+                <Label Name="Okey" Content="Изменения успешно внесены" IsVisible="False"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Name="Save" Content="Сохранить" Click="Save_OnClick"  Margin = "10 15 0 20" Width="100" HorizontalContentAlignment="Center"></Button>

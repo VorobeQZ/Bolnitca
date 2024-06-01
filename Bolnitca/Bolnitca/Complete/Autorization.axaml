@@ -6,9 +6,9 @@
         x:Class="Bolnitca.Autorization"
         Title="Авторизация"
         WindowStartupLocation="CenterScreen"
-        MaxHeight="170"
+        MaxHeight="190"
         MaxWidth="300"
-        MinHeight="170"
+        MinHeight="190"
         MinWidth="300"
         Icon="/Assets/ico.ico"
         Background="CornflowerBlue">
