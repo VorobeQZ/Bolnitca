@@ -85,8 +85,7 @@ public partial class AnalyzesAddUpd : Window
         {
             var currentCabinet = new Personal()
             {
-                Фамилия  = reader.GetString("Фамилия")
-                
+                Фамилия  = reader.GetString("Фамилия")+" "+ reader.GetString("Имя")+" "+ reader.GetString("Отчество")
             };
             personals.Add(currentCabinet);
         }
@@ -104,7 +103,7 @@ public partial class AnalyzesAddUpd : Window
         {
             var currentCabinet = new Patient()
             {
-                Фамилия  = reader.GetString("Фамилия")
+                Фамилия  = reader.GetString("Фамилия")+" "+ reader.GetString("Имя")+" "+ reader.GetString("Отчество")
                 
             };
             patients.Add(currentCabinet);

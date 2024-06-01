@@ -83,7 +83,7 @@ public partial class TableAddUpd : Window
         {
             var currentCabinet = new Personal()
             {
-                Фамилия  = reader.GetString("Фамилия")
+                Фамилия  = reader.GetString("Фамилия")+" "+ reader.GetString("Имя")+" "+ reader.GetString("Отчество")
                 
             };
             personals.Add(currentCabinet);
