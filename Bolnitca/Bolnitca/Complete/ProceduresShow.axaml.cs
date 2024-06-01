@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using MySql.Data.MySqlClient;
+using OfficeOpenXml;
 
 namespace Bolnitca;
 
@@ -51,5 +53,48 @@ public partial class ProceduresShow : Window
     private void Close(object? sender, RoutedEventArgs e)
     {
         Environment.Exit(0);
+    }
+    private void DocumentButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        try
+        {
+            string outputFile = @"C:\Users\bor18\OneDrive\Рабочий стол\Диплом\otchet.xlsx";
+            string query = "call policlinica.Расписание();";
+            MySqlCommand command = new MySqlCommand(query, conn);
+            conn.Open();
+            MySqlDataReader dataReader = command.ExecuteReader();
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Расписание");
+                int row = 1;
+
+                for (int i = 1; i <= dataReader.FieldCount; i++)
+                {
+                    worksheet.Cells[row, i].Value = dataReader.GetName(i - 1);
+                }
+
+                while (dataReader.Read())
+                {
+                    row++;
+                    for (int i = 1; i <= dataReader.FieldCount; i++)
+                    {
+
+                        worksheet.Cells[row, i].Value = dataReader[i - 1];
+
+                    }
+                }
+
+                excelPackage.SaveAs(new FileInfo(outputFile));
+            }
+
+            dataReader.Close();
+            conn.Close();
+            Console.WriteLine("Данные успешно экспортированы в Excel файл.");
+        }
+        catch (Exception exception)
+        {
+            Console.Write("Error" + exception);
+            Console.WriteLine("Ошибка");
+        }
     }
 }

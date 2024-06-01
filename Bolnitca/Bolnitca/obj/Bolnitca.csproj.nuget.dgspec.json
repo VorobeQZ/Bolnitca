@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[11.0.6, )"
             },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[7.1.3, )"
+            },
             "MySql.Data": {
               "target": "Package",
               "version": "[8.3.0, )"

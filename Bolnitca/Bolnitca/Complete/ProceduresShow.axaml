@@ -26,7 +26,8 @@
         </DataGrid>
             <StackPanel Orientation="Horizontal" Margin="10 0 20 0">
                 <Button Name="Back" Content="Назад" Click="Back_OnClick" Width="100" HorizontalContentAlignment="Center"></Button>
-                <Button Name="Exit" Content="Выход" Click="Close" Margin=" 480 10 0 10" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Document" Content="Печать" Click="DocumentButton_OnClick" Margin=" 10 10 0 10" Width="100" HorizontalContentAlignment="Center"></Button>
+                <Button Name="Exit" Content="Выход" Click="Close" Margin=" 360 10 0 10" Width="100" HorizontalContentAlignment="Center"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>
